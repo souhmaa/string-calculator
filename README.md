@@ -16,34 +16,24 @@ Create a simple String calculator with a method ``int add(String numbers)``.
 * Remember to solve things as simply as possible so that you force yourself to write tests you did not think about.
 * Remember to refactor after each passing test.
 
-### Step 2: handle an unknown amount of numbers
-Allow the ``add()`` method to handle an unknown amount of numbers.
+### Step 2: ignore invalid amount of numbers
+Allow the ``add()`` method to handle an invalid amount of numbers.
 
-### Step 3: handle new lines between numbers
-Allow the ``add()`` method to handle new lines between numbers (instead of commas).
+### Step 3: ignore big numbers
+Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2
 
-* the following input is ok:  ``"1\n2,3"`` (will equal 6)
-* the following input is NOT ok:  ``"1,\n"`` (not need to prove it - just clarifying)
-
-### Step 4: support different delimiters
-Support different delimiters: to change a delimiter, the beginning of the string will contain a separate line that looks like this:   
-
-``"//[delimiter]\n[numbers...]"``
-
-For example ``"//;\n1;2"`` should return 3 where the default delimiter is ``';'``.
-
-The first line is optional. 
-All existing scenarios should still be supported.
-
-### Step 5: negative numbers
+### Step 4: negative numbers
 Calling ``add()`` with a negative number will throw an exception ``"negatives not allowed"`` - and the negative that was passed.
 
 For example ``add("1,4,-1")`` should throw an exception with the message ``"negatives not allowed: -1"``.
 
 If there are multiple negatives, show all of them in the exception message.
 
-### Step 6: ignore big numbers
-Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2
+### Step 5: handle new lines between numbers
+Allow the ``add()`` method to handle new lines between numbers (instead of commas).
+
+* the following input is ok:  ``"1\n2,3"`` (will equal 6)
+* the following input is NOT ok:  ``"1,\n"`` (not need to prove it - just clarifying)
 
 ## General requirements
 - Use whatever language and frameworks you want. Use something that you know well.
@@ -53,4 +43,3 @@ Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2
 
 **CODE SUBMISSION:** Add the code to your own Github account and send us the link.
 
-Credits to [Roy Osherove](http://osherove.com/tdd-kata-1) for the original idea.
