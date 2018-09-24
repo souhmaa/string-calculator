@@ -23,7 +23,7 @@ public class StringCalculator {
     }
 
     private boolean isNumeric(String str) {
-        return str.chars().allMatch(Character::isDigit);
+        return !str.isEmpty() && str.chars().allMatch(Character::isDigit);
     }
 
 }

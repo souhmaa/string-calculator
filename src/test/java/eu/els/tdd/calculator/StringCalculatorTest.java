@@ -79,4 +79,17 @@ public class StringCalculatorTest {
         assertEquals(39, sum);
     }
 
+    @Test
+    public void
+    GIVEN_number_contains_consecutive_commas_WHEN_add_THEN_ignore_consecutive_commas() {
+        // GIVEN
+        String numbers = "1,32,a,,4,aza:,2,,,";
+
+        // WHEN
+        int sum = this.calculator.add(numbers);
+
+        // THEN
+        assertEquals(39, sum);
+    }
+
 }
